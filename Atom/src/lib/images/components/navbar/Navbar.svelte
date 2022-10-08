@@ -1,10 +1,10 @@
 <script lang="ts">
-
+import Avatar from '../avatar/Avatar.svelte'
 </script>
 <div>
     <nav class="navbar">
         <div class="navbar-container container">
-            <h1 class="logo">Navbar</h1>
+            <h1 class="logo">Atom Cloud</h1>
             <input type="checkbox" name="" id="">
             <div class="hamburger-lines">
                 <span class="line line1"></span>
@@ -18,6 +18,9 @@
                 <li><a href="#d">Menu</a></li>
                 <li><a href="#e">Testimonial</a></li>
                 <li><a href="#f">Contact</a></li>
+                <li><a href="#f">
+                    <Avatar />
+                </a></li>
             </ul>
         </div>
     </nav>
@@ -32,12 +35,13 @@
 .container{
     max-width: 1200px;
     width: 90%;
-    margin: auto;
+    margin: 0 5.5em;
 }
 
 .navbar{
     box-shadow: 0px 5px 10px 0px #aaa;
-    position: fixed;
+    /* position: sticky;
+    top: 0px; */
     width: 100%;
     background: #fff;
     color: #000;
@@ -48,7 +52,7 @@
 .navbar-container{
     display: flex;
     justify-content: space-between;
-    height: 64px;
+    height: 4em;
     align-items: center;
 }
 
@@ -58,13 +62,14 @@
 }
 .logo{
     order: 1;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
 }
 
 .menu-items li{
     list-style: none;
     margin-left: 1.5rem;
     font-size: 1.3rem;
+    /* margin-top: .5em; */
 }
 
 .navbar a{

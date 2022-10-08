@@ -42,13 +42,11 @@
 </header>
 
 <style>
-	/* header {
-		display: flex;
-		justify-content: space-between;
-		width: 3em;
-		height: 3em;
-		position: absolute;
-	} */
+	header {
+		width: 100%;
+		position: sticky;
+		top: 0em;
+	}
 	/* div{
 		position: fixed;
 	top: 0;

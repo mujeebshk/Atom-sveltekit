@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
-	import  Button from "../lib/images/components/buttons/Button.svelte";
-	import Sidebar1 from "../lib/images/components/sidebar/Sidebar.svelte"
+	import  Button from "../lib/images/components/buttons/Newbutton.svelte";
+	import Sidebar1 from "../lib/images/components/sidebar/sidebar-dropdown.svelte"
 
 	let count = 0;
 
@@ -17,10 +17,15 @@
 <!-- <Button color="alternative">Alternative</Button> -->
 
 <main>
-	<Sidebar1 />
-	<div>
-		<Button>Blue</Button>
-	</div>
+	<Sidebar1>
+		<span slot="content">
+			herfnuhrenugfhtnkhjvngi4thgh4wnguihtn
+			<div>
+				<Button color="alternative">Alternative</Button>
+				<Button color="alternative" pill={true}>Alternative</Button>
+			</div>
+		</span>
+	</Sidebar1>
 </main>
 
 

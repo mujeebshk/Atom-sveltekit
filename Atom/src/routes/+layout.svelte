@@ -6,11 +6,9 @@
 </script>
 
 <div class="app">
+	
 	<Header />
-
 	<main>
-		<h1>ytgkuygi76fikuv</h1>
-		<Sidebar1 />
 		<slot />
 	</main>
 

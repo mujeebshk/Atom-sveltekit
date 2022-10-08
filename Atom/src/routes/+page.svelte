@@ -27,15 +27,14 @@
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2> -->
 	<Counter />
-	<h1>dhnfhdvufh</h1>
 </section>
 
 <style>
-	section {
+	/* section {
 		max-height: 80vh;
 		width:20em;
 		border: 1px solid;
-	}
+	} */
 
 	/* h1 {
 		width: 100%;

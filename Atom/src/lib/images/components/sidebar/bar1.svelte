@@ -1,5 +1,6 @@
 <script>
-  
+  	import { page } from '$app/stores';
+
     let navActive = false;
     const toggleNav = () => {
       navActive = !navActive;
@@ -15,7 +16,7 @@
       position: fixed;
       background: black;
       left: 0;
-      top: 0em;
+      top: 4em;
       bottom: 0;
       overflow: hidden;
       width: 80px;
@@ -26,7 +27,7 @@
       width: 400px;
     }
   
-    .menu.active .menu__Link {
+    .menu__Item .menu__Link {
       color: white;
     }
   
@@ -53,9 +54,6 @@
   
     .menu__Link:hover {
       color: orange;
-    }
-  
-    .menu__Link.active {
       background: #555;
     }
   
@@ -96,13 +94,18 @@
     <nav class="menu" class:active="{ navActive }">
       <button class="menu__Toggle" on:click="{ () => toggleNav() }">{ navActive ? '<' : '>'}</button>
       <ul class="menu__List">
-        <li class="menu__Item"><a title="🐤" class="menu__Link active" href="a#">Link 1</a></li>
+        <li class="menu__Item"><a title="🐤" class="menu__Link" href="a#">
+          <i class="fa fa-fw fa-home"></i>
+          Link 1</a></li>
         <li class="menu__Item"><a title="🐶" class="menu__Link" href="b#">Link with more text</a></li>
         <li class="menu__Item"><a title="🙈" class="menu__Link" href="c#">Link 3</a></li>
+        <li class:active={$page.url.pathname === '/about'}>
+          <a href="/about" class="menu__Link">About</a>
+        </li>
         <li class="menu__Item"><a title="🐻" class="menu__Link" href="d#">Link 4</a></li>
       </ul>
     </nav>
       <div class="wrapper" class:active="{ navActive }">
-      <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
+      <slot />
     </div>
